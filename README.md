@@ -36,66 +36,51 @@ A real-time computer vision system that enables touchless control of system volu
 
 # 🧠 How It Works
 
-The webcam captures real-time video input.
-
-MediaPipe detects hand landmarks and classifies left/right hands.
-
-The distance between thumb and index finger is calculated.
-
-Distance values are interpolated to:
-
-Adjust brightness (Left Hand)
-
-Adjust volume (Both Hands Detected)
-
-When only the right hand is visible:
-
-1 Finger → Play/Pause
-
-2 Fingers → Forward
-
-3 Fingers → Backward
+1. The webcam captures real-time video input.
+2. MediaPipe detects hand landmarks and classifies left/right hands.
+3. The distance between thumb and index finger is calculated.
+4. Distance values are interpolated to:
+   - Adjust brightness (Left Hand)
+   - Adjust volume (Both Hands Detected)
+5. When only the right hand is visible:
+   - 1 Finger → Play/Pause
+   - 2 Fingers → Forward
+   - 3 Fingers → Backward
 
 A gesture cooldown mechanism ensures stable command execution.
 
-💻 Installation
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/gesture-control-system.git
-cd gesture-control-system
+# 💻 Installation
+- 1️⃣ Clone the Repository
+  - git clone [https://github.com/kushalkrd92/Real-Time-Hand-Gesture-Multimedia-and-System-Controller]
+  - cd gesture-control-system
 
-2️⃣ Create Virtual Environment (Recommended)
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
+- 2️⃣ Create Virtual Environment (Recommended)
+  - python -m venv myenv
+  - myenv/bin/activate   # Mac/Linux
+  - venv\Scripts\activate      # Windows
 
-3️⃣ Install Dependencies
-pip install -r requirements.txt
+- 3️⃣ Install Dependencies
+  - pip install -r requirements.txt
 
-
-If you don’t have a requirements.txt, install manually:
-
-pip install opencv-python mediapipe numpy pycaw screen-brightness-control pywin32 comtypes
-
-▶️ Usage
+# ▶️ Usage
 
 Run the main script:
 
-python merged.py
-
-
+- python merged.py
+  
 Press q to exit the application.
 
-🎮 Controls
-Gesture	Action
-Left-hand pinch	Adjust Brightness
-Both-hands pinch	Adjust Volume
-1 Finger (Right hand)	Play/Pause
-2 Fingers (Right hand)	Forward
-3 Fingers (Right hand)	Backward
-📋 System Requirements
+# 🎮 Controls
+| Gesture                | Action            |
+| ---------------------- | ----------------- |
+| Left-hand pinch        | Adjust Brightness |
+| Both-hands pinch       | Adjust Volume     |
+| 1 Finger (Right hand)  | Play/Pause        |
+| 2 Fingers (Right hand) | Forward           |
+| 3 Fingers (Right hand) | Backward          |
 
-Windows OS (for pycaw and Win32 API support)
+# 📋 System Requirements
 
-Python 3.8+
-
-Webcam
+- Windows OS (for pycaw and Win32 API support)
+- Python 3.8+
+- Webcam
